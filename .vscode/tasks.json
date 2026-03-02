@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm install dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "npm start",
+      "type": "shell",
+      "command": "npm start",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$watchTask"
+    },
+    {
+      "label": "npm run dev",
+      "type": "shell",
+      "command": "npm run dev",
+      "group": { "kind": "build", "isDefault": true }
+    },
+    {
+      "label": "ESLint Check",
+      "type": "shell",
+      "command": "npx eslint src/**/*.js",
+      "problemMatcher": "$eslintProblemMatcher"
+    },
+    {
+      "label": "Format All Files",
+      "type": "shell",
+      "command": "npx prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+      "group": "format"
+    },
+    {
+      "label": "npm audit",
+      "type": "shell",
+      "command": "npm audit --audit-level=moderate",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": []
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDV Mobile - Sistema de Vendas</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <h1 class="logo">🛍️ PDV Mobile</h1>
+          <p class="subtitle">Sistema de Ponto de Venda</p>
+        </div>
+        <button class="cart-toggle" id="cartBtn">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SEARCH & FILTER (opcional) -->
+    <section class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Buscar produto..."
+        class="search-input"
+      />
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="products-container">
+        <h2 class="section-title">Produtos Disponíveis</h2>
+        <div class="products-grid" id="products"></div>
+      </div>
+    </main>
+
+    <!-- CART PANEL (DrawerSlide) -->
+    <aside class="cart-drawer" id="cartPanel">
+      <div class="cart-header">
+        <h2>Seu Carrinho</h2>
+        <button class="close-btn" id="closeCart">✕</button>
+      </div>
+
+      <div class="cart-items-wrapper">
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="subtotal">R$ 0.00</span>
+        </div>
+        <div class="summary-row highlight">
+          <strong>Total:</strong>
+          <strong id="cartTotal">R$ 0.00</strong>
+        </div>
+      </div>
+
+      <button class="btn-checkout" id="checkoutBtn">Finalizar Venda</button>
+      <button class="btn-clear" id="clearCart">Limpar Carrinho</button>
+    </aside>
+
+    <!-- OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="/js/main.js" defer></script>
+  </body>
+</html>

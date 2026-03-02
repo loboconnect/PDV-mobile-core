@@ -1,0 +1,28 @@
+{
+  "name": "pdv-mobile-core",
+  "version": "1.0.0",
+  "description": "PDV mobile-first demo app - Node + Express",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "pdv",
+    "pos",
+    "express",
+    "mobile"
+  ],
+  "author": "loboconnect",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
